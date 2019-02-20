@@ -75,13 +75,10 @@ function renderDefaultInput(inputProps) {
     var inputAdornmentStyle = {
         height: 20,
         whiteSpace: "nowrap",
-        overflow: "hidden",
         textOverflow: "ellipsis",
-        top: 6,
-        left: 5 + getTextWidth(value),
+        left: 16 + getTextWidth(value),
         position: "absolute",
         pointerEvents: "none",
-        fontSize: 16,
         color: "#9E9E9E"
     };
 
@@ -89,13 +86,11 @@ function renderDefaultInput(inputProps) {
         required: required,
         error: error,
         helperText: helperText,
-        style: { overflow: "hidden" },
         disabled: disabled,
-        margin: 'normal',
         label: label,
         autoFocus: autoFocus,
-        className: classes.textField,
         value: value,
+        className: classes.textField,
         InputProps: _extends({
             endAdornment: endAdornment && _react2.default.createElement(
                 _InputAdornment2.default,
@@ -106,7 +101,21 @@ function renderDefaultInput(inputProps) {
             classes: {
                 input: classes.input
             }
-        }, other)
+        }, other),
+        variant: 'outlined',
+        margin: 'normal',
+        InputLabelProps: {
+            shrink: true,
+            style: {
+                fontSize: '1.125rem'
+            }
+        },
+        inputProps: {
+            style: {
+                fontSize: '0.875rem',
+                padding: '12px 14px 8px 14px'
+            }
+        }
     });
 }
 

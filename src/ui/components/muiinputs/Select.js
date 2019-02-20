@@ -26,7 +26,6 @@ function renderInput(inputProps) {
             error={error}
             helperText={helperText}
             disabled={disabled}
-            margin="normal"
             label={label}
             className={classes.textField}
             value={value}
@@ -40,6 +39,20 @@ function renderInput(inputProps) {
                     input: classes.input,
                 },
                 ...other,
+            }}
+            variant="outlined"
+            margin="normal"
+            InputLabelProps={{
+                shrink: true,
+                style: {
+                    fontSize: '1.125rem',
+                }
+            }}
+            inputProps={{
+                style: {
+                    fontSize: '0.875rem',
+                    padding: '12px 14px 8px 14px'
+                }
             }}
         />
     );
@@ -78,7 +91,7 @@ const styles = theme => ({
     },
     suggestionsContainerOpen: {
         position: 'absolute',
-        marginTop: theme.spacing.unit,
+        marginTop: theme.spacing.unit * -1,
         marginBottom: theme.spacing.unit * 3,
         left: 0,
         right: 0,
