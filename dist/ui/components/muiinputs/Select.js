@@ -73,7 +73,7 @@ function renderInput(inputProps) {
         error: error,
         helperText: helperText,
         disabled: disabled,
-        margin: 'normal',
+        margin: 'dense',
         label: label,
         className: classes.textField,
         value: value,
@@ -90,7 +90,10 @@ function renderInput(inputProps) {
             classes: {
                 input: classes.input
             }
-        }, other)
+        }, other),
+        InputLabelProps: {
+            shrink: true
+        }
     });
 }
 

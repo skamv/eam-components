@@ -55,7 +55,10 @@ var EAMInput = function (_EAMBaseInput) {
                     return _this2.onChangeHandler(event.target.value);
                 },
                 fullWidth: true,
-                margin: 'normal' });
+                margin: 'dense',
+                InputLabelProps: {
+                    shrink: true
+                } });
         }
     }]);
 

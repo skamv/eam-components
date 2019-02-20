@@ -91,7 +91,7 @@ function renderDefaultInput(inputProps) {
         helperText: helperText,
         style: { overflow: "hidden" },
         disabled: disabled,
-        margin: 'normal',
+        margin: 'dense',
         label: label,
         autoFocus: autoFocus,
         className: classes.textField,
@@ -106,7 +106,10 @@ function renderDefaultInput(inputProps) {
             classes: {
                 input: classes.input
             }
-        }, other)
+        }, other),
+        InputLabelProps: {
+            shrink: true
+        }
     });
 }
 

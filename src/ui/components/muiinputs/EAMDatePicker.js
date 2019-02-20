@@ -50,10 +50,13 @@ export default class EAMDatePicker extends EAMBaseInput {
                     onChange={date => this.onChangeHandler(this.readDate(date))}
                     fullWidth
                     format="dd-MMM-yyyy"
-                    margin="normal"
+                    margin="dense"
                     label={text}
                     leftArrowIcon={<Icon> keyboard_arrow_left </Icon>}
                     rightArrowIcon={<Icon> keyboard_arrow_right </Icon>}
+                    InputLabelProps={{
+                        shrink: true
+                    }}
                 />
             </MuiPickersUtilsProvider>
         )

@@ -96,7 +96,7 @@ var EAMDatePicker = function (_EAMBaseInput) {
                     },
                     fullWidth: true,
                     format: 'dd-MMM-yyyy',
-                    margin: 'normal',
+                    margin: 'dense',
                     label: text,
                     leftArrowIcon: _react2.default.createElement(
                         _Icon2.default,
@@ -107,7 +107,10 @@ var EAMDatePicker = function (_EAMBaseInput) {
                         _Icon2.default,
                         null,
                         ' keyboard_arrow_right '
-                    )
+                    ),
+                    InputLabelProps: {
+                        shrink: true
+                    }
                 })
             );
         }

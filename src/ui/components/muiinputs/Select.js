@@ -26,7 +26,7 @@ function renderInput(inputProps) {
             error={error}
             helperText={helperText}
             disabled={disabled}
-            margin="normal"
+            margin="dense"
             label={label}
             className={classes.textField}
             value={value}
@@ -40,6 +40,9 @@ function renderInput(inputProps) {
                     input: classes.input,
                 },
                 ...other,
+            }}
+            InputLabelProps={{
+                shrink: true
             }}
         />
     );

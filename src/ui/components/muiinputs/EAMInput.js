@@ -19,7 +19,10 @@ class EAMInput extends EAMBaseInput {
                 value={this.props.value || ''}
                 onChange={event => this.onChangeHandler(event.target.value)}
                 fullWidth
-                margin="normal"/>
+                margin="dense"
+                InputLabelProps={{
+                    shrink: true
+                }}/>
         )
     }
 }
